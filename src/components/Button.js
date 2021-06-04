@@ -7,7 +7,7 @@ const Button = (props) => {
   return (
     <button
       onClick={props.onClick}
-      className={`rounded shadow-sm focus:shadow-none hover:opacity-75 px-6 py-2 mx-3 ${
+      className={`rounded text-xl shadow-sm focus:shadow-none hover:opacity-75 px-3 py-1 ${
         colors[props.color]
       }`}
     >
