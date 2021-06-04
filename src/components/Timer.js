@@ -50,7 +50,7 @@ const Timer = () => {
 
   const resetTimer = () => {
     stopTimer();
-    setMinute(25);
+    setMinute(timerType === POMODORO ? POMODORO_TIMER : BREAK_TIMER);
     setSecond(0);
   };
 
