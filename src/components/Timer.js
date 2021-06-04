@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Button from "./Button";
+import MediaControls from "./MediaControls";
 
 const Timer = () => {
   const POMODORO_TIMER = 25;
@@ -60,17 +60,7 @@ const Timer = () => {
       <h2 className="text-9xl">
         {minute}:{second < 10 ? `0${second}` : second}
       </h2>
-      <div className="py-4">
-        <Button color="primary" onClick={startTimer}>
-          Start
-        </Button>
-        <Button color="danger" onClick={stopTimer}>
-          Pause
-        </Button>
-        <Button color="secondary" onClick={resetTimer}>
-          Reset
-        </Button>
-      </div>
+      <MediaControls start={startTimer} stop={stopTimer} reset={resetTimer} />
     </>
   );
 };
