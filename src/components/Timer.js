@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Button from "./Button";
 
 const Timer = () => {
   const POMODORO_TIMER = 25;
@@ -55,14 +56,22 @@ const Timer = () => {
   };
 
   return (
-    <div>
+    <>
       <h2 className="text-9xl">
         {minute}:{second < 10 ? `0${second}` : second}
       </h2>
-      <button onClick={startTimer}>Start</button>
-      <button onClick={stopTimer}>Pause</button>
-      <button onClick={resetTimer}>Reset</button>
-    </div>
+      <div className="py-4">
+        <Button color="primary" onClick={startTimer}>
+          Start
+        </Button>
+        <Button color="danger" onClick={stopTimer}>
+          Pause
+        </Button>
+        <Button color="secondary" onClick={resetTimer}>
+          Reset
+        </Button>
+      </div>
+    </>
   );
 };
 
